@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: rgb(34, 34, 34);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+header {
+    background: rgb(18, 36, 73);
+    background: radial-gradient(circle, rgb(18, 36, 73) 0%, rgba(7,17,50,1) 75%);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.apptitle {
+    color: white;
+    font-size: 3em;
+}
+
+.wave {
+    position: absolute;
+    height: 100vh;
+}
+
+.wave2 {
+    display: no;
+    position: absolute;
+    right: -50vw;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+}
