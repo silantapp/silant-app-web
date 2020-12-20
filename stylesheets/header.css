@@ -1,3 +1,15 @@
+.downloadapp {
+    height: 5em;
+    width: 15em;
+    z-index: 500;
+    border-radius: 20px;
+    background-color: cyan;
+    position: fixed;
+    top: 1em;
+    opacity: 0;
+    left: 1em;
+    display: none;
+}
 
 header {
     position: relative;
