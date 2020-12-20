@@ -30,3 +30,19 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+@media screen and (max-width: 800px) {
+    .mockupshow {
+        padding: 2em;
+        flex-direction: column;
+    }
+    .mockupshow img {
+        width: 100%;
+        z-index: 100;
+        margin: -3em;
+    }
+    .mockupshow:nth-of-type(2) {
+        flex-direction: column-reverse;
+    }
+}
+
