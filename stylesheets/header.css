@@ -1,15 +1,18 @@
 
 header {
+    position: relative;
     background: rgb(18, 36, 73);
     background: radial-gradient(circle, rgb(18, 36, 73) 0%, rgb(4, 10, 27) 75%);
+    
     width: 100vw;
     max-width: 100vw;
-    height: 100vh;
+    height: 120vh;
+    
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    position: relative;
+    
     overflow: hidden;
 }
 
@@ -46,13 +49,45 @@ header >h2 {
     right: -50vw;
 }
 
+.bottomwave {
+    position: absolute;
+    height: 20vh;
+    width: 100vw;
+    bottom: 0;
+}
+
+.downarrows {
+    width: 5em;
+    height: 6em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5em;
+    margin-bottom: 5vh;
+    animation: downarrow 3s infinite ease-in-out;
+}
+
 .downarrows span {
     width: 2em;
     height: 0.5em;
     background-color: white;
     transform: rotate(45deg);
+    margin: -7px;
+    border-radius: 2em;
 }
 
-.downarrows span{
-    
+.downarrows span:last-child{
+    transform: rotate(-45deg);
+}
+
+@keyframes downarrow {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
