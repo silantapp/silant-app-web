@@ -72,14 +72,12 @@ main {
     top: 0;
     height: 15em;
     width: 100%;
-    /* display: none; */
 }
 .app-description svg:last-child {
     position: absolute;
     bottom: 0;
     height: 10em;
     width: 100%;
-    /* display: none; */
 }
 
 .app-description h3 {
@@ -91,7 +89,9 @@ main {
     font-weight: 400;
 }
 
-
+.app-description h3:first-of-type {
+    font-size: 1.4em;
+}
 
 .app-description h3 span {
     font-weight: 700;
@@ -102,10 +102,22 @@ main {
 }
 
 @media screen and (max-width: 800px) {
+    .app-description {
+        padding-top: 3em;
+        padding-bottom: 3em;
+    }
     .app-description h3 {
         padding: 1em;
         font-size: 1em;
         margin: 0;
     }
-
+    .app-description h3:first-of-type {
+        font-size: 1em;
+    }
+    .app-description svg:first-child {
+        height: 5em;
+    }
+    .app-description svg:last-child {
+        height: 5em;
+    }
 }
