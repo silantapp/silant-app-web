@@ -52,6 +52,7 @@
 }
 
 .likeskipshow img {
+    height: auto;
     width: 20%;
 }
 
@@ -98,16 +99,17 @@
         margin-top: 5em;
     }
     .likeskipshow {
-        padding: 1em;
+        padding: 0.8em;
         align-items: center;
         flex-direction: column-reverse;
     }
     .likeskipshow img {
-        width: 30%;
+        width: 2.5em;
         min-width: 130px;
     }
     .likeskipshow h1 {
-        width: 93%;
+        width: 100%;
+        padding: 0;
         margin: 0;
         font-size: 1.3em;
     }
