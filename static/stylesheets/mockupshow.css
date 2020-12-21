@@ -38,6 +38,7 @@
     -webkit-text-fill-color: transparent;
 }
 
+
 .likeskipshow {
     max-width: 950px;
     display: flex;
@@ -71,6 +72,10 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.mockupshow:nth-of-type(6) h1 span {
+    color: #1DB954;
 }
 
 @media screen and (max-width: 800px) {

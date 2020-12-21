@@ -100,8 +100,23 @@
         </section>
         <section class="likeskipshow">
             <img src="static/images/likebutton.png" alt="">
-            <h1>Vous <span>aimez</span> la musique ? <br> <span>Likez</span> la pour la <span>retrouver</span> plus tard !</h1>
+            <h1>Vous <span>aimez</span> la musique ? <br> <span>Likez</span> pour la <span>retrouver</span> plus tard !</h1>
         </section>
+        <section class="mockupshow">
+            <img src="static/images/Mockup4.png" alt="">
+            <aside>
+                <h1>La bibliothèque <span>Spotify®</span> rien que pour vous.</h1>
+                <h5>Un compte Premium ainsi que l'application Spotify® sont nécessaires pour créer une party. Rejoindre ne nécessite rien d'autre que l'application Silant.</h5>
+            </aside>
+        </section>
+        <div class="team">
+            <div class="reverser">
+                <div class="downarrows">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
     </main>
 
 
@@ -121,6 +136,15 @@
             },
             duration: 1,
             opacity: 1
+        });
+        gsap.to('.downloadapp', {
+            scrollTrigger: {
+                trigger: '.team',
+                start: "center bottom",
+                scrub: true
+            },
+            duration: 1,
+            height: 150,
         });
     </script>
 </body>

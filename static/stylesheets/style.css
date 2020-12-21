@@ -101,6 +101,22 @@ main {
     -webkit-text-fill-color: transparent;
 }
 
+.team {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.team .reverser {
+    position: absolute;
+    top: 6em;
+    left: 13em;
+    transform: rotate(180deg);
+}
+.team .downarrows span {
+    background-color: black;
+}
+
 @media screen and (max-width: 800px) {
     .app-description {
         padding-top: 3em;
