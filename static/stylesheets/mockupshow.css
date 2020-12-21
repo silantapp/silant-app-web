@@ -18,7 +18,7 @@
 }
 
 .mockupshow:nth-of-type(1) h1 span {
-    background: linear-gradient(90deg, rgb(221, 108, 255) 0%, rgb(252, 161, 65) 100%);
+    background: linear-gradient(90deg, rgb(241, 95, 193) 0%, rgb(25, 95, 107) 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

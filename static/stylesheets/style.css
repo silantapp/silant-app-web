@@ -102,19 +102,93 @@ main {
 }
 
 .team {
-    height: 100vh;
-    width: 100%;
     position: relative;
+    background: rgb(18, 36, 73);
+    background: radial-gradient(circle, rgb(24, 46, 90) 0%, rgb(4, 10, 27) 75%);
+    
+    width: 100vw;
+    max-width: 100vw;
+    height: fit-content;
+    padding-top: 4em;
+    padding-bottom: 2em;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    overflow: hidden;
 }
 
-.team .reverser {
+.team .topwave {
+    z-index: 100;
+    height: 10em;
+    width: 100%;
     position: absolute;
-    top: 6em;
-    left: 13em;
-    transform: rotate(180deg);
+    top: 0;
 }
-.team .downarrows span {
-    background-color: black;
+
+.team h1{
+    margin-bottom: 2em;
+}
+
+.team h1, .team h3 {
+    color: white;
+}
+
+.devs {
+    max-width: 1000px;
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.devs section {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.devs section div{
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0px 0px 14px 3px #ffffff23;
+}
+.devs section div img{
+   width: 100%;
+}
+
+
+
+footer {
+    margin: 0;
+    width: 100vw;
+    height: fit-content;
+    background-color: white;
+    box-shadow: 0px 0px 14px 3px #00000021;
+    display: flex;
+    align-items: center;
+}
+
+footer a {
+    text-decoration-color: grey;
+    margin-left: 1em;
+}
+
+footer a h5 {
+    margin: 0;
+    color: grey;
+}
+
+footer a:first-of-type {
+    text-decoration: none;
 }
 
 @media screen and (max-width: 800px) {
@@ -136,4 +210,19 @@ main {
     .app-description svg:last-child {
         height: 5em;
     }
+    .devs {
+        flex-direction: column;
+        align-items: center;
+    }
+    .team h1{
+        margin-bottom: 1em;
+        font-size: 1.5em;
+    }
+    .devs section div{
+        width: 6em;
+        height: 6em;
+     }
+     footer {
+         flex-direction: column;
+     }
 }
