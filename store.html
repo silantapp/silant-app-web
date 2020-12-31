@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Téléchargez Silant</title>
+    <link rel="icon" href="static/favicon.ico">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 100vh;
+            background: rgb(73,0,44);
+            background: linear-gradient(139deg, rgba(73,0,44,1) 0%, rgba(0,37,64,1) 100%);
+        }
+        h1 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+        }
+        .stores {
+            width: 100%;
+            height: 40vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+        a {
+            width: 90%;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+        #appstore {
+            box-sizing: border-box;
+            padding: 5%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Téléchargez Silant</h1>
+    <div class="stores">
+        <a id="appstore" href="https://testflight.apple.com/join/kM2tGcmC" target="_blank">
+            <img
+                src="static/images/appstore-badge.svg"
+                alt="Get it on the AppStore">
+        </a>
+        <a id="playstore" href="https://play.google.com/store/apps/details?id=com.explosense.silant" target="_blank">
+            <img
+                src="static/images/playstore-badge.png"
+                alt="Get it on Google Play">
+        </a>
+    </div>
+</body>
+</html>
