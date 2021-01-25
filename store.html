@@ -1,58 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Téléchargez Silant</title>
-    <link rel="icon" href="static/favicon.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./static/stylesheets/logoanimated.css">
+    <link rel="stylesheet" href="./static/stylesheets/header.css">
     <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            align-items: center;
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        header {
+            background: rgb(18, 36, 73);
+            background: radial-gradient(circle, rgb(18, 36, 73) 0%, rgb(4, 10, 27) 75%);
+            width: 100vw;
+            max-width: 100vw;
             height: 100vh;
-            background: rgb(73,0,44);
-            background: linear-gradient(139deg, rgba(73,0,44,1) 0%, rgba(0,37,64,1) 100%);
-        }
-        h1 {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: white;
-        }
-        .stores {
-            width: 100%;
-            height: 40vh;
             display: flex;
+            align-items: center;
+            justify-content: center;
             flex-direction: column;
-            justify-content: space-around;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .storebtn {
+            width: 200px;
+            height: 100px;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
             align-items: center;
         }
-        a {
-            width: 90%;
+
+        #appstore img {
+            width: 87%;
         }
-        img {
+        #playstore img {
             width: 100%;
-            height: auto;
         }
-        #appstore {
-            box-sizing: border-box;
-            padding: 5%;
-        }
+
     </style>
 </head>
+
 <body>
-    <h1>Téléchargez Silant</h1>
-    <div class="stores">
-        <a id="appstore" href="https://testflight.apple.com/join/kM2tGcmC" target="_blank">
+    <header>
+        <h1 class="apptitle">Silant</h1>
+        <a class="animatedlogo">
+            <div><img src="static/layeredlogo/MainCircle.png" alt="Logo part"></div>
+            <div><img src="static/layeredlogo/MidleCircle.png" alt="Logo part"></div>
+            <div><img src="static/layeredlogo/LeftCircle.png" alt="Logo part"></div>
+            <div><img src="static/layeredlogo/RightCircle.png" alt="Logo part"></div>
+        </a>
+
+        <a class="storebtn" id="appstore" href="https://testflight.apple.com/join/kM2tGcmC" target="_blank">
             <img
                 src="/static/images/appstore-badge.svg"
                 alt="Get it on the AppStore">
         </a>
-        <a id="playstore" href="https://play.google.com/store/apps/details?id=com.explosense.silant" target="_blank">
+        <a class="storebtn" id="playstore" href="https://play.google.com/store/apps/details?id=com.explosense.silant" target="_blank">
             <img
                 src="/static/images/playstore-badge.png"
                 alt="Get it on Google Play">
         </a>
-    </div>
+
+        <svg class="wave" viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+            <path d="M117.10,-17.27 C56.15,86.34 139.67,87.33 83.23,186.02 L0.00,150.00 L0.00,0.00 Z"
+                style="stroke: none; fill: url(#gradient);">
+            </path>
+            <defs>
+                <linearGradient id="gradient" x1="0.5" y1="0" x2="0.5" y2="1">
+                    <stop offset="0" stop-color="#005959" />
+                    <stop offset="1" stop-color="#070032" />
+                </linearGradient>
+            </defs>
+        </svg>
+        <svg class="wave2" viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+            <path d="M213.19,0.00 C152.69,70.06 252.25,109.03 113.99,173.19 L500.00,150.00 L500.00,0.00 Z"
+                style="stroke: none; fill: url(#gradient2);;"></path>
+            <linearGradient id="gradient2" x1="0.5" y1="0" x2="0.5" y2="1">
+                <stop offset="0" stop-color="#070032" />
+                <stop offset="1" stop-color="#005959" />
+            </linearGradient>
+        </svg>
+    </header>
 </body>
+
 </html>

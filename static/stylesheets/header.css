@@ -15,7 +15,7 @@ header {
     overflow: hidden;
 }
 
-header >a {
+header >h2 + a {
     z-index: 100;
     width: fit-content;
     height: fit-content;
