@@ -27,19 +27,34 @@ header >h2 + a {
     text-decoration: none;
 }
 
-header >h2 {
+header >h2, header >h3 {
     color: white;
     margin: 2em;
 }
 
 .apptitle {
     color: white;
-    font-size: 2em;
+    font-size: 3em;
 }
+
+.baseline {
+    color: white;
+    font-size: 2em;
+    z-index: 100;
+    text-align: center;
+}
+/* 
+.baseline span {
+    font-weight: 700;
+    background: linear-gradient(90deg, rgb(134, 150, 243) 0%, rgb(253, 155, 245) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+} */
 
 .wave {
     position: absolute;
     height: 100vh;
+    left: -10vw;
 }
 
 .wave2 {
@@ -51,7 +66,7 @@ header >h2 {
     position: absolute;
     height: 20vh;
     width: 100vw;
-    bottom: 0;
+    bottom: -1px;
 }
 
 .downarrows {
@@ -60,8 +75,8 @@ header >h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 5em;
-    margin-bottom: 5vh;
+    margin-top: -1em;
+    margin-bottom: 8vh;
     animation: downarrow 3s infinite ease-in-out;
 }
 
