@@ -2,20 +2,17 @@ header {
     position: relative;
     background: rgb(18, 36, 73);
     background: radial-gradient(circle, rgb(24, 46, 90) 0%, rgb(4, 10, 27) 75%);
-    
     width: 100vw;
     max-width: 100vw;
     height: 120vh;
-    
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    
     overflow: hidden;
 }
 
-header >h2 + a {
+header>h2~a {
     z-index: 100;
     width: fit-content;
     height: fit-content;
@@ -23,11 +20,17 @@ header >h2 + a {
     padding: 1em;
     padding-left: 2em;
     padding-right: 2em;
-    border-radius: 2em;
+    border-radius: 1em;
     text-decoration: none;
+    margin-bottom: 1em;
 }
 
-header >h2, header >h3 {
+header>h2~a>h1 {
+    font-size: 1.2em;
+    color: white;
+}
+
+header>h2, header>h3 {
     color: white;
     margin: 2em;
 }
@@ -43,6 +46,7 @@ header >h2, header >h3 {
     z-index: 100;
     text-align: center;
 }
+
 /* 
 .baseline span {
     font-weight: 700;
@@ -89,7 +93,7 @@ header >h2, header >h3 {
     border-radius: 2em;
 }
 
-.downarrows span:last-child{
+.downarrows span:last-child {
     transform: rotate(-45deg);
 }
 
@@ -117,6 +121,6 @@ header >h2, header >h3 {
         height: 14em;
     }
     .wave {
-       left: -10vw;
+        left: -10vw;
     }
 }
