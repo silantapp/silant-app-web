@@ -20,7 +20,7 @@
 }
 
 .animatedlogo >div:nth-of-type(2) {
-    animation: bumper 1s infinite cubic-bezier(.29,1.21,.64,-0.21);
+    animation: bumper 2s infinite cubic-bezier(.29,1.21,.64,-0.21);
     transform-origin: 50% 51%; 
 }
 
