@@ -174,8 +174,6 @@ footer {
     margin: 0;
     width: 100vw;
     height: fit-content;
-    background-color: white;
-    box-shadow: 0px 0px 14px 3px #00000021;
     display: flex;
     align-items: center;
     padding-top: 2em;
@@ -220,12 +218,19 @@ footer a:first-of-type {
         height: 5em;
     }
     .devs {
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
     }
+    .team {
+        padding-top: 6.5em;
+        padding-bottom: 2em;
+    }
     .team h1 {
-        margin-bottom: 1em;
+        margin-bottom: 1.5em;
         font-size: 1.5em;
+    }
+    .devs a {
+        margin-bottom: 1em;
     }
     .devs a div {
         width: 6em;

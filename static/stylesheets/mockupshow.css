@@ -94,6 +94,9 @@
         margin-bottom: 1em;
         text-align: center;
     }
+    .mockupshow h5 {
+        text-align: justify;
+    }
     .mockupshow img {
         width: 70vw;
         z-index: 100;
