@@ -112,10 +112,18 @@ header>h2, header>h3 {
 
 @media screen and (max-width: 800px) {
     header {
-        height: 110vh;
+        height: 98vh;
+        padding-bottom: 1em;
+        justify-content: space-evenly;
+    }
+    .apptitle {
+        font-size: 2em;
     }
     .bottomwave {
         height: 5em;
+    }
+    .downarrows {
+        margin-bottom: 13vh;
     }
     header>h2, header>h3 {
         color: white;
@@ -124,8 +132,8 @@ header>h2, header>h3 {
         width: 90%;
     }
     header .animatedlogo {
-        width: 13em;
-        height: 13em;
+        width: 11em;
+        height: 11em;
     }
     .wave {
         left: -10vw;
