@@ -132,8 +132,10 @@ header>h2, header>h3 {
         width: 90%;
     }
     header .animatedlogo {
-        width: 11em;
-        height: 11em;
+        max-width: 11em;
+        max-height: 11em;
+        width: 20vh;
+        height: 20vh;
     }
     .wave {
         left: -10vw;
