@@ -36,6 +36,97 @@ header>h2, header>h3 {
     margin: 2em;
 }
 
+header>.download {
+    height: 96px;
+    display: flex;
+    flex-direction: row;
+}
+
+header>.download>a {
+    height: 100%;
+    width: 50%;
+}
+
+header>.download>a:first-child {
+    margin-right: 64px;
+}
+
+header>.download>a>div {
+    height: 100%;
+    width: 100%;
+}
+
+header>.download>a>div>img {
+    height: 100%;
+    width: auto;
+}
+
+header>.countdown {
+    /* background-color: #ffffff23; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 64px;
+    z-index: 1;
+}
+
+header>.countdown>* {
+    margin: 0;
+    color: #fff;
+}
+
+@media screen and (max-width: 440px) {
+    header>.countdown>h2 {
+        font-size: 18px;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 320px) {
+    header>.countdown>h2 {
+        font-size: 14px;
+    }
+}
+
+header>.countdown>p {
+    font-size: 24px;
+    margin: 8px 0 20px 0;
+    text-align: center;
+}
+
+header>.countdown>.clock {
+    margin: 8px 0 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+header>.countdown>.clock>div:not(:last-child) {
+    margin-right: 12px;
+}
+header>.countdown>.clock>div>p {
+    margin: 0;
+}
+
+header>.countdown>a {
+    text-decoration: none;
+}
+header>.countdown>a>div {
+    text-decoration: none;
+    padding: 8px 20px;
+    background-color: #fff;
+    color: #111;
+    font-weight: 500;
+    transition: 0.1s all ease-in-out;
+    border-radius: 8px;
+}
+header>.countdown>a>div:hover {
+    background-color: #005155;
+    color: #fff;
+}
+
+.hidden {
+    display: none !important;
+}
+
 .apptitle {
     color: white;
     font-size: 3em;
@@ -60,11 +151,13 @@ header>h2, header>h3 {
     position: absolute;
     height: 100vh;
     left: -10vw;
+    pointer-events: none;
 }
 
 .wave2 {
     position: absolute;
     right: -50vw;
+    pointer-events: none;
 }
 
 .bottomwave {
@@ -72,6 +165,7 @@ header>h2, header>h3 {
     height: 20vh;
     width: 100vw;
     bottom: -1px;
+    pointer-events: none;
 }
 
 .downarrows {
