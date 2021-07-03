@@ -133,7 +133,8 @@
         <section class="mockupshow">
             <img src="static/images/Mockup3.png" alt="">
             <h1><span>Everyone </span>can <span>add </span> their favorites songs to a <span>shared</span>
-                <span>queue!</span></h1>
+                <span>queue!</span>
+            </h1>
         </section>
 
         <section class="likeskipshow">
@@ -145,7 +146,8 @@
         <section class="likeskipshow">
             <img src="static/images/likebutton.png" alt="">
             <h1>You can as well <span>save</span> <span>a</span> <span>song </span> to find it later by giving it a
-                <span>like.</span></h1>
+                <span>like.</span>
+            </h1>
         </section>
 
         <section class="mockupshow">
@@ -195,10 +197,13 @@
         <a id="license" rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
             <h5>©2021 Explosense Silant</h5>
         </a>
-        <a href="https://silant.net/privacy">
+        <a href="/privacy">
             <h5>Privacy policy</h5>
         </a>
-        <a href="https://silant.net/support">
+        <a href="/terms">
+            <h5>Terms and Conditions</h5>
+        </a>
+        <a href="/support">
             <h5>Contact</h5>
         </a>
     </footer>
@@ -252,7 +257,7 @@
             document.getElementById("cd_countdown").classList.remove('hidden');
             document.getElementById("cd_download").classList.add('hidden');
             doCountdown();
-            var x = setInterval(function() {
+            var x = setInterval(function () {
                 var distance = doCountdown();
 
                 console.log(distance)
