@@ -20,7 +20,6 @@
 
 <body>
     <div class="downloadapp">
-
         <a target="_blank" href="">
             <img class="storeButton" src="./static/images/appstore.png" alt="Get it on the AppStore">
         </a>
@@ -44,7 +43,6 @@
             <div><img src="static/layeredlogo/RightCircle.png" alt="Logo part"></div>
         </div>
 
-
         <svg class="wave" viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
             <path d="M117.10,-17.27 C56.15,86.34 139.67,87.33 83.23,186.02 L0.00,150.00 L0.00,0.00 Z"
                 style="stroke: none; fill: url(#gradient);">
@@ -56,6 +54,7 @@
                 </linearGradient>
             </defs>
         </svg>
+
         <svg class="wave2" viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
             <path d="M213.19,0.00 C152.69,70.06 252.25,109.03 113.99,173.19 L500.00,150.00 L500.00,0.00 Z"
                 style="stroke: none; fill: url(#gradient2);;"></path>
@@ -66,6 +65,38 @@
         </svg>
 
         <h3 class="baseline"><span>Tired </span>of having to <span>manage music </span> on your <span>own?</span></h3>
+        <div class="download hidden" id="cd_download">
+            <a target="_blank" href="">
+                <div>
+                    <img class="storeButton" src="./static/images/appstore.png" alt="Get it on the AppStore">
+                </div>
+            </a>
+            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.explosense.silant">
+                <div>
+                    <img class="storeButton" src="./static/images/playstore.png" alt=" Get it on Google Play">
+                </div>
+            </a>
+        </div>
+        <div class="countdown hidden" id="cd_countdown">
+            <h2>Silant will be available in</h2>
+            <div class="clock">
+                <div id="container_cddays">
+                    <p><span id="cddays">0</span> days</p>
+                </div>
+                <div id="container_cdhours">
+                    <p><span id="cdhours">0</span> hours</p>
+                </div>
+                <div id="container_cdminutes">
+                    <p><span id="cdminutes">0</span> minutes</p>
+                </div>
+                <div id="container_cdseconds">
+                    <p><span id="cdseconds">0</span> seconds</p>
+                </div>
+            </div>
+            <a href="/static/silant.ics">
+                <div>Add to calendar</div>
+            </a>
+        </div>
 
         <div class="downarrows">
             <span></span>
@@ -79,7 +110,6 @@
     </header>
 
     <main class="main">
-
         <section class="mockupshow">
             <h1><span>Let </span>others <span>control </span>the <span>music!</span></h1>
             <img src="static/images/Mockup1.png" alt="">
@@ -90,7 +120,8 @@
                 <path d="M-3.67,37.00 C254.22,85.36 265.52,-9.38 500.00,49.98 L500.00,0.00 L0.00,0.00 Z"
                     style="stroke: none; fill: white;"></path>
             </svg>
-            <h1><span>Silant </span>enables you to <span>share</span> <span>control</span> of the music via a <span>realtime</span>
+            <h1><span>Silant </span>enables you to <span>share</span> <span>control</span> of the music via a
+                <span>realtime</span>
                 <span>collaborative</span> <span>queue.</span>
             </h1>
             <svg style="bottom: -1px;" viewBox="0 0 500 150" preserveAspectRatio="none">
@@ -101,17 +132,20 @@
 
         <section class="mockupshow">
             <img src="static/images/Mockup3.png" alt="">
-            <h1><span>Everyone </span>can <span>add </span> their favorites songs to a <span>shared</span> <span>queue!</span></h1>
+            <h1><span>Everyone </span>can <span>add </span> their favorites songs to a <span>shared</span>
+                <span>queue!</span></h1>
         </section>
 
         <section class="likeskipshow">
             <img src="static/images/skipbutton.png" alt="">
-            <h1>You <span>don’t</span> <span>like </span>the currently playing song? No worries, vote to <span>skip it!</span></h1>
+            <h1>You <span>don’t</span> <span>like </span>the currently playing song? No worries, vote to <span>skip
+                    it!</span></h1>
         </section>
 
         <section class="likeskipshow">
             <img src="static/images/likebutton.png" alt="">
-            <h1>You can as well <span>save</span> <span>a</span> <span>song </span> to find it later by giving it a <span>like.</span></h1>
+            <h1>You can as well <span>save</span> <span>a</span> <span>song </span> to find it later by giving it a
+                <span>like.</span></h1>
         </section>
 
         <section class="mockupshow">
@@ -140,7 +174,6 @@
                     </div>
                     <h3>Hugo</h3>
                 </a>
-
 
                 <a target="_blank" href="https://github.com/celian-rib">
                     <div>
@@ -172,6 +205,9 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="https://greensock.com/js/src/plugins/Physics2DPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/EasePack.min.js"></script>
     <script>
         gsap.to('.downloadapp', {
             scrollTrigger: {
@@ -182,15 +218,55 @@
             duration: 1,
             opacity: 1
         });
-        gsap.to('.downloadapp', {
-            scrollTrigger: {
-                trigger: '.team',
-                start: "center bottom",
-                scrub: true
-            },
-            duration: 1,
-            // height: 150,
-        });
+
+        // Countdown
+        var countDownDate = new Date("Wed, 14 Jul 2021 16:00:00 +0200").getTime();
+
+        function doCountdown() {
+            var now = new Date().getTime();
+
+            var distance = countDownDate - now;
+
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            if (days === 0) document.getElementById("container_cddays").classList.add('hidden');
+            if (hours === 0 && days === 0) document.getElementById("container_cdhours").classList.add('hidden');
+            if (minutes === 0 && hours === 0) document.getElementById("container_cdminutes").classList.add('hidden');
+            if (seconds === 0 && minutes === 0) document.getElementById("container_cdseconds").classList.add('hidden');
+
+            document.getElementById("cddays").innerHTML = days;
+            document.getElementById("cdhours").innerHTML = hours;
+            document.getElementById("cdminutes").innerHTML = minutes;
+            document.getElementById("cdseconds").innerHTML = seconds;
+
+            return distance;
+        }
+
+        if (countDownDate - Date.now() <= 0) {
+            document.getElementById("cd_countdown").classList.add('hidden');
+            document.getElementById("cd_download").classList.remove('hidden');
+        } else {
+            document.getElementById("cd_countdown").classList.remove('hidden');
+            document.getElementById("cd_download").classList.add('hidden');
+            doCountdown();
+            var x = setInterval(function() {
+                var distance = doCountdown();
+
+                console.log(distance)
+                if (distance <= 1000) {
+                    clearInterval(x);
+
+                    setTimeout(() => {
+                        play();
+                    }, 200);
+                    document.getElementById("cd_countdown").classList.add('hidden');
+                    document.getElementById("cd_download").classList.remove('hidden');
+                }
+            }, 1000);
+        }
     </script>
 </body>
 
