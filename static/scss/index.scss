@@ -194,11 +194,13 @@ body {
 		justify-content: center;
 		margin-right: 64px;
 
-		> img {
-			height: 90%;
-			max-height: 1000px;
-			width: auto;
-			transform: rotate(10deg);
+		> picture { height: 100%;
+			> img {
+				height: 90%;
+				max-height: 1000px;
+				width: auto;
+				transform: rotate(10deg);
+			}
 		}
 
 		@include tablet() {
@@ -259,9 +261,11 @@ body {
 		align-items: center;
 		padding: 24px;
 		justify-content: space-around;
-		> img {
-			width: 45%;
-			max-width: 400px;
+		> picture {
+			> img {
+				width: 100%;
+				max-width: 400px;
+			}
 		}
 		> p {
 			font-size: 32px;
@@ -319,10 +323,12 @@ body {
 		align-items: center;
 		padding: 2em;
 		justify-content: center;
-		> img {
-			height: auto;
-			width: 20%;
-			margin: 2em;
+		> picture {
+			> img {
+				height: auto;
+				width: 70%;
+				margin: 2em;
+			}
 		}
 		> p {
 			font-size: 24px;

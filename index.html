@@ -39,7 +39,8 @@
 	<link rel="stylesheet" href="static/css/reset.css">
 	<link rel="stylesheet" href="static/scss/index.min.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 	<div class="header">
@@ -78,7 +79,11 @@
 		</div>
 
 		<div class="phone">
-			<img src="/static/images/app_playerpage.png" alt="Silant App">
+            <picture>
+                <source srcset="/static/images/app_playerpage.webp" type="image/webp">
+                <source srcset="/static/images/app_playerpage.png" type="image/png">
+                <img src="/static/images/app_playerpage.png" alt="Silant App">
+            </picture>
 		</div>
 
 		<div class="background">
@@ -167,7 +172,11 @@
 	<div class="content">
 		<section class="mockupshow">
             <p><span>Let others control </span>the <span>music!</span></p>
-            <img src="static/images/Mockup1.png" alt="">
+            <picture>
+                <source srcset="/static/images/Mockup1.webp" type="image/webp">
+                <source srcset="/static/images/Mockup1.png" type="image/png">
+                <img src="/static/images/Mockup1.png" alt="">
+            </picture>
         </section>
 
         <div class="app-description">
@@ -178,26 +187,42 @@
         </div>
 
         <section class="mockupshow">
-            <img src="static/images/Mockup3.png" alt="">
+            <picture>
+                <source srcset="/static/images/Mockup3.webp" type="image/webp">
+                <source srcset="/static/images/Mockup3.png" type="image/png">
+                <img src="/static/images/Mockup3.png" alt="">
+            </picture>
             <p><span>Everyone can add </span> their favorites songs to a <span>shared queue!</span>
             </p>
         </section>
 
         <section class="likeskipshow">
-            <img src="static/images/skipbutton.png" alt="">
+            <picture>
+                <source srcset="/static/images/skipbutton.webp" type="image/webp">
+                <source srcset="/static/images/skipbutton.png" type="image/png">
+                <img src="/static/images/skipbutton.png" alt="">
+            </picture>
             <p>You <span>don’t like </span>the currently playing song? No worries, vote to <span>skip
                     it!</span></p>
         </section>
 
         <section class="likeskipshow">
-            <img src="static/images/likebutton.png" alt="">
+            <picture>
+                <source srcset="/static/images/likebutton.webp" type="image/webp">
+                <source srcset="/static/images/likebutton.png" type="image/png">
+                <img src="/static/images/likebutton.png" alt="">
+            </picture>
             <p>You can as well <span>save a song </span> to find it later by giving it a
                 <span>like.</span>
             </p>
         </section>
 
         <section class="mockupshow">
-            <img src="static/images/Mockup4.png" alt="">
+            <picture>
+                <source srcset="/static/images/Mockup4.webp" type="image/webp">
+                <source srcset="/static/images/Mockup4.png" type="image/png">
+                <img src="/static/images/Mockup4.png" alt="">
+            </picture>
             <aside>
                 <p>Enjoy all the songs from <span><a target="_blank" href="https://spotify.com">Spotify</a> </span>and
                     <span><a target="_blank" href="https://audius.co">Audius</a></span>
