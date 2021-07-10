@@ -1,229 +1,242 @@
 <!DOCTYPE html>
-<html lang="fr">
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Silant</title>
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/fav/favicon-16x16.png">
+    <link rel="manifest" href="/static/fav/site.webmanifest">
+    <link rel="mask-icon" href="/static/fav/safari-pinned-tab.svg" color="#091124">
+    <link rel="shortcut icon" href="/static/fav/favicon.ico">
+    <meta name="msapplication-TileColor" content="#091124">
+    <meta name="msapplication-config" content="/static/fav/browserconfig.xml">
+	<meta name="theme-color" content="#091124">
 
-    <link rel="stylesheet" href="static/stylesheets/style.css">
-    <link rel="stylesheet" href="static/stylesheets/logoanimated.css">
-    <link rel="stylesheet" href="static/stylesheets/header.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="static/stylesheets/mockupshow.css">
+	<!-- Primary Meta Tags -->
+	<title>Silant</title>
+	<meta name="title" content="Silant">
+	<meta name="description" content="Tired of dealing with the music on your own? Silant enables you to share control of the music thanks to a real-time collaborative queue.">
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://silant.net/">
+	<meta property="og:title" content="Silant">
+	<meta property="og:description" content="Tired of dealing with the music on your own? Silant enables you to share control of the music thanks to a real-time collaborative queue.">
+	<meta property="og:image" content="https://silant.net/static/images/banner.jpg">
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="https://silant.net/">
+	<meta property="twitter:title" content="Silant">
+	<meta property="twitter:description" content="Tired of dealing with the music on your own? Silant enables you to share control of the music thanks to a real-time collaborative queue.">
+	<meta property="twitter:image" content="https://silant.net/static/images/banner.jpg">
+	
+	<!-- CSS -->
+	<link rel="stylesheet" href="static/css/reset.css">
+	<link rel="stylesheet" href="static/scss/index.min.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-
-    <link rel="icon" href="static/favicon.ico">
 </head>
-
 <body>
-    <div class="downloadapp">
-        <a target="_blank" href="https://apps.apple.com/fr/app/silant/id1545550966">
-            <img class="storeButton" src="./static/images/appstore.png" alt="Get it on the AppStore">
-        </a>
-        <div class="animatedlogo">
-            <div><img src="static/layeredlogo/MainCircle.png" alt="Logo part"></div>
-            <div><img src="static/layeredlogo/MidleCircle.png" alt="Logo part"></div>
-            <div><img src="static/layeredlogo/LeftCircle.png" alt="Logo part"></div>
-            <div><img src="static/layeredlogo/RightCircle.png" alt="Logo part"></div>
-        </div>
-        <a target="_blank" href="https://play.google.com/store/apps/details?id=com.explosense.silant">
-            <img class="storeButton" src="./static/images/playstore.png" alt=" Get it on Google Play">
-        </a>
-    </div>
-    <header>
-        <h1 class="apptitle">Silant</h1>
+	<div class="header">
+		<div class="app">
+			<div class="logo">
+				<img src="/static/layeredlogo/MainCircle.png" alt="Logo" />
+				<img src="/static/layeredlogo/MidleCircle.png" alt="Logo" />
+				<img src="/static/layeredlogo/LeftCircle.png" alt="Logo" />
+				<img src="/static/layeredlogo/RightCircle.png" alt="Logo" />
+			</div>
+			<h1>Silant</h1>
+		</div>
 
-        <div class="animatedlogo">
-            <div><img src="static/layeredlogo/MainCircle.png" alt="Logo part"></div>
-            <div><img src="static/layeredlogo/MidleCircle.png" alt="Logo part"></div>
-            <div><img src="static/layeredlogo/LeftCircle.png" alt="Logo part"></div>
-            <div><img src="static/layeredlogo/RightCircle.png" alt="Logo part"></div>
-        </div>
+		<div class="text">
+			<p class="catch">Everyone controls the music</p>
+			<p class="available">Released in:</p>
+			<div id="countdown_container" class="countdown">
+				<div class="clock">
+					<div id="container_cddays">
+						<p><span id="days">0</span> <span class="dots">:</span><span class="words">days</span></p>
+					</div>
+					<div id="container_cdhours">
+						<p><span id="hours">0</span> <span class="dots">:</span><span class="words">hours</span></p>
+					</div>
+					<div id="container_cdminutes">
+						<p><span id="minutes">0</span> <span class="dots">:</span><span class="words">minutes</span></p>
+					</div>
+					<div id="container_cdseconds">
+						<p><span id="seconds">0</span> <span class="words">seconds</span></p>
+					</div>
+				</div>
+			</div>
+			<a href="/static/silant.ics" class="addtocld">
+				<div>Add to calendar</div>
+			</a>
+		</div>
 
-        <svg class="wave" viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
-            <path d="M117.10,-17.27 C56.15,86.34 139.67,87.33 83.23,186.02 L0.00,150.00 L0.00,0.00 Z"
-                style="stroke: none; fill: url(#gradient);">
-            </path>
-            <defs>
-                <linearGradient id="gradient" x1="0.5" y1="0" x2="0.5" y2="1">
-                    <stop offset="0" stop-color="#005959" />
-                    <stop offset="1" stop-color="#070032" />
-                </linearGradient>
-            </defs>
-        </svg>
+		<div class="phone">
+			<img src="/static/images/app_playerpage.png" alt="Silant App">
+		</div>
 
-        <svg class="wave2" viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
-            <path d="M213.19,0.00 C152.69,70.06 252.25,109.03 113.99,173.19 L500.00,150.00 L500.00,0.00 Z"
-                style="stroke: none; fill: url(#gradient2);;"></path>
-            <linearGradient id="gradient2" x1="0.5" y1="0" x2="0.5" y2="1">
-                <stop offset="0" stop-color="#070032" />
-                <stop offset="1" stop-color="#005959" />
-            </linearGradient>
-        </svg>
-
-        <h3 class="baseline"><span>Tired </span>of having to <span>manage music </span> on your <span>own?</span></h3>
-        <div class="download hidden" id="cd_download">
-            <a target="_blank" href="https://apps.apple.com/fr/app/silant/id1545550966">
-                <div>
-                    <img class="storeButton" src="./static/images/appstore.png" alt="Get it on the AppStore">
-                </div>
-            </a>
-            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.explosense.silant">
-                <div>
-                    <img class="storeButton" src="./static/images/playstore.png" alt=" Get it on Google Play">
-                </div>
-            </a>
-        </div>
-        <div class="countdown hidden" id="cd_countdown">
-            <h2>Silant will be available in</h2>
-            <div class="clock">
-                <div id="container_cddays">
-                    <p><span id="cddays">0</span> days</p>
-                </div>
-                <div id="container_cdhours">
-                    <p><span id="cdhours">0</span> hours</p>
-                </div>
-                <div id="container_cdminutes">
-                    <p><span id="cdminutes">0</span> minutes</p>
-                </div>
-                <div id="container_cdseconds">
-                    <p><span id="cdseconds">0</span> seconds</p>
-                </div>
-            </div>
-            <a href="/static/silant.ics">
-                <div>Add to calendar</div>
-            </a>
-        </div>
-
-        <div class="downarrows">
-            <span></span>
-            <span></span>
-        </div>
-
-        <svg class="bottomwave" viewBox="0 0 500 150" preserveAspectRatio="none">
-            <path d="M0.00,49.98 C149.99,150.00 341.13,168.25 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
-                style="stroke: none; fill: rgb(255, 255, 255);"></path>
-        </svg>
-    </header>
-
-    <main class="main">
-        <section class="mockupshow">
-            <h1><span>Let </span>others <span>control </span>the <span>music!</span></h1>
+		<div class="background">
+			<svg class="wave" viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+				<path d="M117.10,-17.27 C56.15,86.34 139.67,87.33 83.23,186.02 L0.00,150.00 L0.00,0.00 Z"
+					style="stroke: none; fill: url(#gradient);">
+				</path>
+				<defs>
+					<linearGradient id="gradient" x2="0" y2="1">
+						<stop offset="0%" stop-color="#031C2C" />
+						<stop offset="100%" stop-color="#010712" />
+					</linearGradient>
+					<filter id="drop-shadow">
+						<feGaussianBlur in="SourceAlpha" stdDeviation="10"/>
+						<feOffset dx="5" dy="0" result="offsetblur"/>
+						<feFlood flood-color="rgba(0,0,0,0.6)"/>
+						<feComposite in2="offsetblur" operator="in"/>
+						<feMerge>
+							<feMergeNode/>
+							<feMergeNode in="SourceGraphic"/>
+						</feMerge>
+					</filter>
+				</defs>
+			</svg>
+	
+			<svg class="wave2" viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+				<path d="M213.19,0.00 C152.69,70.06 252.25,109.03 113.99,173.19 L500.00,150.00 L500.00,0.00 Z"
+					style="stroke: none; fill: url(#gradient2);;"></path>
+				<defs>
+					<linearGradient id="gradient2" x2="0" y2="1">
+						<stop offset="0%" stop-color="#02122e" />
+						<stop offset="100%" stop-color="#031C2C" />
+					</linearGradient>
+					<filter id="drop-shadow2">
+						<feGaussianBlur in="SourceAlpha" stdDeviation="10"/>
+						<feOffset dx="-5" dy="0" result="offsetblur"/>
+						<feFlood flood-color="rgba(0,0,0,0.6)"/>
+						<feComposite in2="offsetblur" operator="in"/>
+						<feMerge>
+							<feMergeNode/>
+							<feMergeNode in="SourceGraphic"/>
+						</feMerge>
+					</filter>
+				</defs>
+			</svg>
+		</div>
+	</div>
+	<svg width="0" height="0">
+		<defs>
+			<clipPath id="wave" clipPathUnits="objectBoundingBox">
+				<path d="M 0,1
+						L 0,0
+						L 1,0
+						L 1, .4
+						C .65 1, 0 1, -.5 .4
+						Z" />
+			</clipPath>
+			<clipPath id="wavephone" clipPathUnits="objectBoundingBox">
+				<path d="M 0,1
+						L 0,0
+						L 1,0
+						L 1, .5
+						C .5 .8, -2 .7, -.7 .4
+						Z" />
+			</clipPath>
+			<clipPath id="descriptionwave" clipPathUnits="objectBoundingBox">
+				<path d="M 0,1
+						L 0,0
+						C .4 0, .4 .3, 1 .1
+						L 1,0
+						L 1,1
+						C .2 .8, .5 1, 0 1
+						Z" />
+			</clipPath>
+			<clipPath id="descriptionwavephone" clipPathUnits="objectBoundingBox">
+				<path d="M 0,1
+						L 0,0
+						C .2 0, .5 .15, 1 .05
+						L 1,0
+						L 1,1
+						C .2 .9, .4 1, 0 1
+						Z" />
+			</clipPath>
+		</defs>
+	</svg>
+	<div class="content">
+		<section class="mockupshow">
+            <p><span>Let others control </span>the <span>music!</span></p>
             <img src="static/images/Mockup1.png" alt="">
         </section>
 
         <div class="app-description">
-            <svg style="top: -1px;" viewBox="0 0 500 150" preserveAspectRatio="none">
-                <path d="M-3.67,37.00 C254.22,85.36 265.52,-9.38 500.00,49.98 L500.00,0.00 L0.00,0.00 Z"
-                    style="stroke: none; fill: white;"></path>
-            </svg>
-            <h1><span>Silant </span>enables you to <span>share</span> <span>control</span> of the music via a
-                <span>realtime</span>
-                <span>collaborative</span> <span>queue.</span>
-            </h1>
-            <svg style="bottom: -1px;" viewBox="0 0 500 150" preserveAspectRatio="none">
-                <path d="M0.00,49.98 C210.78,85.36 409.42,147.53 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
-                    style="stroke: none; fill: white;"></path>
-            </svg>
+            <p>
+				<span>Silant </span>enables you to <span>share</span> <span>control</span> of the music via a
+                <span>realtime</span> <span>collaborative</span> <span>queue.</span>
+            </p>
         </div>
 
         <section class="mockupshow">
             <img src="static/images/Mockup3.png" alt="">
-            <h1><span>Everyone </span>can <span>add </span> their favorites songs to a <span>shared</span>
-                <span>queue!</span>
-            </h1>
+            <p><span>Everyone can add </span> their favorites songs to a <span>shared queue!</span>
+            </p>
         </section>
 
         <section class="likeskipshow">
             <img src="static/images/skipbutton.png" alt="">
-            <h1>You <span>don’t</span> <span>like </span>the currently playing song? No worries, vote to <span>skip
-                    it!</span></h1>
+            <p>You <span>don’t like </span>the currently playing song? No worries, vote to <span>skip
+                    it!</span></p>
         </section>
 
         <section class="likeskipshow">
             <img src="static/images/likebutton.png" alt="">
-            <h1>You can as well <span>save</span> <span>a</span> <span>song </span> to find it later by giving it a
+            <p>You can as well <span>save a song </span> to find it later by giving it a
                 <span>like.</span>
-            </h1>
+            </p>
         </section>
 
         <section class="mockupshow">
             <img src="static/images/Mockup4.png" alt="">
             <aside>
-                <h1>Enjoy all the songs from <span><a target="_blank" href="https://spotify.com">Spotify</a> </span>and
+                <p>Enjoy all the songs from <span><a target="_blank" href="https://spotify.com">Spotify</a> </span>and
                     <span><a target="_blank" href="https://audius.co">Audius</a></span>
-                </h1>
-                <h5>A Spotify® premium account is required to use this streaming service. The music is played directly
-                    on the host's device.</h5>
-                <h5></h5>
+                </p>
+                <p>A Spotify® premium account is required to use this streaming service. The music is played directly on the host's device.</p>
             </aside>
         </section>
 
-        <div class="team">
-            <svg class="topwave" viewBox="0 0 500 150" preserveAspectRatio="none">
-                <path d="M-8.74,18.25 C336.05,133.70 304.46,8.39 510.44,57.72 L500.00,0.00 L0.00,0.00 Z"
-                    style="stroke: none; fill: white;"></path>
-            </svg>
-            <h1>Developers</h1>
-            <div class="devs">
-
-                <a target="_blank" href="https://kr4x.dev/">
-                    <div>
-                        <img src="./static/images/kr4x.jpg" alt="">
-                    </div>
-                    <h3>Hugo</h3>
-                </a>
-
-                <a target="_blank" href="https://github.com/celian-rib">
-                    <div>
-                        <img src="./static/images/celian.png" alt="">
-                    </div>
-                    <h3>Célian</h3>
-                </a>
-
-            </div>
-            <svg class="bottomwave" viewBox="0 0 500 150" preserveAspectRatio="none">
-                <path d="M0.00,49.98 C149.99,150.00 341.13,168.25 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
-                    style="stroke: none; fill: rgb(255, 255, 255);"></path>
-            </svg>
-        </div>
-
-    </main>
-
-    <footer>
-        <a id="license" rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
-            <h5>©2021 Explosense Silant</h5>
-        </a>
-        <a href="/privacy">
-            <h5>Privacy policy</h5>
-        </a>
-        <a href="/terms">
-            <h5>Terms and Conditions</h5>
-        </a>
-        <a href="/support">
-            <h5>Contact</h5>
-        </a>
-    </footer>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
-    <script src="https://greensock.com/js/src/plugins/Physics2DPlugin.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/EasePack.min.js"></script>
-    <script>
-        gsap.to('.downloadapp', {
-            scrollTrigger: {
-                trigger: '.bottomwave',
-                start: "top top",
-                scrub: true
-            },
-            duration: 1,
-            opacity: 1
-        });
-
+		<section class="dev">
+			<h1>Developers</h1>
+			<a href="https://kr4x.dev" target="_blank">
+				<div>
+					<img src="/static/images/kr4x.jpg" alt="Hugo">
+				</div>
+				<p>Hugo</p>
+			</a>
+			<a href="https://github.com/celian-rib" target="_blank">
+				<div>
+					<img src="/static/images/celian.png" alt="Celian">
+				</div>
+				<p>Célian</p>
+			</a>
+		</section>
+	</div>
+	<div class="footer">
+		<a id="license" rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
+			<div>©2021 Explosense Silant</div>
+		</a>
+		<a href="/privacy">
+			<div>Privacy policy</div>
+		</a>
+		<a href="/terms">
+			<div>Terms and Conditions</div>
+		</a>
+		<a href="/support">
+			<div>Contact</div>
+		</a>
+	</div>
+	<script>
         // Countdown
         var countDownDate = new Date("Wed, 14 Jul 2021 16:00:00 +0200").getTime();
 
@@ -239,40 +252,32 @@
 
             if (days === 0) document.getElementById("container_cddays").classList.add('hidden');
             if (hours === 0 && days === 0) document.getElementById("container_cdhours").classList.add('hidden');
-            if (minutes === 0 && hours === 0) document.getElementById("container_cdminutes").classList.add('hidden');
-            if (seconds === 0 && minutes === 0) document.getElementById("container_cdseconds").classList.add('hidden');
+            if (minutes === 0 && hours === 0 && days === 0) document.getElementById("container_cdminutes").classList.add('hidden');
 
-            document.getElementById("cddays").innerHTML = days;
-            document.getElementById("cdhours").innerHTML = hours;
-            document.getElementById("cdminutes").innerHTML = minutes;
-            document.getElementById("cdseconds").innerHTML = seconds;
+            document.getElementById("days").innerHTML = days < 10 ? `0${days}` : days;
+            document.getElementById("hours").innerHTML = hours < 10 ? `0${hours}` : hours;
+            document.getElementById("minutes").innerHTML = minutes < 10 ? `0${minutes}` : minutes;
+            document.getElementById("seconds").innerHTML = seconds < 10 ? `0${seconds}` : seconds;
 
             return distance;
         }
 
         if (countDownDate - Date.now() <= 0) {
-            document.getElementById("cd_countdown").classList.add('hidden');
-            document.getElementById("cd_download").classList.remove('hidden');
+            document.getElementById("countdown_container").classList.add('hidden');
         } else {
-            document.getElementById("cd_countdown").classList.remove('hidden');
-            document.getElementById("cd_download").classList.add('hidden');
+            document.getElementById("countdown_container").classList.remove('hidden');
             doCountdown();
             var x = setInterval(function () {
                 var distance = doCountdown();
 
-                console.log(distance)
                 if (distance <= 1000) {
                     clearInterval(x);
 
-                    setTimeout(() => {
-                        play();
-                    }, 200);
-                    document.getElementById("cd_countdown").classList.add('hidden');
+                    document.getElementById("countdown_container").classList.add('hidden');
                     document.getElementById("cd_download").classList.remove('hidden');
                 }
             }, 1000);
         }
     </script>
 </body>
-
 </html>

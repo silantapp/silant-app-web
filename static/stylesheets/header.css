@@ -204,6 +204,15 @@ header>.countdown>a>div:hover {
     }
 }
 
+@media screen and (min-width: 801px) and (max-height: 880px) {
+    header .animatedlogo {
+        max-width: 11em;
+        max-height: 11em;
+        width: 10vh;
+        height: 10vh;
+    }
+}
+
 @media screen and (max-width: 800px) {
     header {
         height: 98vh;
