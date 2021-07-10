@@ -4,6 +4,8 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+.hidden { display: none!important; }
+
 .header {
 	position: relative;
 	top: 0;
@@ -99,7 +101,7 @@ body {
 		> .available {
 			@include phone() {
 				position: absolute;
-				bottom: calc(128px + 48px);
+				bottom: calc(100px + 48px);
 				color: #000;
 			}
 			@include xsmallphone() {
@@ -130,7 +132,7 @@ body {
 
 			@include phone() {
 				position: absolute;
-				bottom: 128px;
+				bottom: 100px;
 				> .clock {
 					flex-wrap: wrap;
 					> div {
@@ -169,7 +171,7 @@ body {
 			}
 			@include phone() {
 				position: absolute;
-				bottom: 90px;
+				bottom: calc(100px - 40px);
 				> div {
 					border: 2px solid #000;
 				}
@@ -180,6 +182,23 @@ body {
 				> div {
 					border: 2px solid #000;
 				}
+			}
+		}
+
+		> .download {
+			display: flex;
+			margin-left: -10px;
+			> a {
+				> img {
+					height: 72px;
+					width: auto;
+				}
+			}
+			@include phone() {
+				position: absolute;
+				bottom: 32px;
+				flex-direction: column;
+				margin: 0;
 			}
 		}
 	}

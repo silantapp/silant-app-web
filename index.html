@@ -56,7 +56,7 @@
 
 		<div class="text">
 			<p class="catch">Everyone controls the music</p>
-			<p class="available">Released in:</p>
+			<p class="available" id="countdownhide">Released in:</p>
 			<div id="countdown_container" class="countdown">
 				<div class="clock">
 					<div id="container_cddays">
@@ -73,9 +73,17 @@
 					</div>
 				</div>
 			</div>
-			<a href="/static/silant.ics" class="addtocld">
+			<a href="/static/silant.ics" class="addtocld" id="countdownhide2">
 				<div>Add to calendar</div>
 			</a>
+            <div class="download" id="downloadapp">
+                <a href="https://apps.apple.com/fr/app/silant/id1545550966">
+                    <img src="/static/images/appstore.png">
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.explosense.silant">
+                    <img src="/static/images/playstore.png">
+                </a>
+            </div>
 		</div>
 
 		<div class="phone">
@@ -289,8 +297,13 @@
 
         if (countDownDate - Date.now() <= 0) {
             document.getElementById("countdown_container").classList.add('hidden');
+            document.getElementById("countdownhide").classList.add('hidden');
+            document.getElementById("downloadapp").classList.remove('hidden');
         } else {
             document.getElementById("countdown_container").classList.remove('hidden');
+            document.getElementById("countdownhide").classList.remove('hidden');
+            document.getElementById("countdownhide2").classList.remove('hidden');
+            document.getElementById("downloadapp").classList.add('hidden');
             doCountdown();
             var x = setInterval(function () {
                 var distance = doCountdown();
@@ -299,7 +312,9 @@
                     clearInterval(x);
 
                     document.getElementById("countdown_container").classList.add('hidden');
-                    document.getElementById("cd_download").classList.remove('hidden');
+                    document.getElementById("countdownhide").classList.add('hidden');
+                    document.getElementById("countdownhide2").classList.add('hidden');
+                    document.getElementById("downloadapp").classList.remove('hidden');
                 }
             }, 1000);
         }
