@@ -2,13 +2,13 @@ $tablet-width: 768px;
 $desktop-width: 1100px;
 
 @mixin xsmallphone {
-	@media (max-width: #{$tablet-width - 1px}) and (max-height: 580px) {
+	@media (max-width: #{$tablet-width - 1px}) and (max-height: 450px) {
 		@content;
 	}
 }
 
 @mixin smallphone {
-	@media (max-width: #{$tablet-width - 1px}) and (max-height: 740px) {
+	@media (max-width: #{$tablet-width - 1px}) and (max-height: 650px) {
 		@content;
 	}
 }
