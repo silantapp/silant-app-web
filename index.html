@@ -36,8 +36,8 @@
 	<meta property="twitter:image" content="https://silant.net/static/images/banner.jpg">
 	
 	<!-- CSS -->
-	<link rel="stylesheet" href="static/css/reset.css">
-	<link rel="stylesheet" href="static/scss/index.min.css">
+	<link rel="stylesheet" href="/static/css/reset.css">
+	<link rel="stylesheet" href="/static/scss/index.min.css">
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet">
@@ -56,26 +56,6 @@
 
 		<div class="text">
 			<p class="catch">Everyone controls the music</p>
-			<p class="available" id="countdownhide">Release in:</p>
-			<div id="countdown_container" class="countdown">
-				<div class="clock">
-					<div id="container_cddays">
-						<p><span id="days">0</span> <span class="dots">:</span><span class="words">days</span></p>
-					</div>
-					<div id="container_cdhours">
-						<p><span id="hours">0</span> <span class="dots">:</span><span class="words">hours</span></p>
-					</div>
-					<div id="container_cdminutes">
-						<p><span id="minutes">0</span> <span class="dots">:</span><span class="words">minutes</span></p>
-					</div>
-					<div id="container_cdseconds">
-						<p><span id="seconds">0</span> <span class="words">seconds</span></p>
-					</div>
-				</div>
-			</div>
-			<a href="/static/silant.ics" class="addtocld" id="countdownhide2">
-				<div>Add to calendar</div>
-			</a>
             <div class="download" id="downloadapp">
                 <a href="https://apps.apple.com/fr/app/silant/id1545550966">
                     <img src="/static/images/appstore.png">
@@ -269,55 +249,5 @@
 			<div>Contact</div>
 		</a>
 	</div>
-	<script>
-        // Countdown
-        var countDownDate = new Date("Wed, 14 Jul 2021 16:00:00 +0200").getTime();
-
-        function doCountdown() {
-            var now = new Date().getTime();
-
-            var distance = countDownDate - now;
-
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            if (days === 0) document.getElementById("container_cddays").classList.add('hidden');
-            if (hours === 0 && days === 0) document.getElementById("container_cdhours").classList.add('hidden');
-            if (minutes === 0 && hours === 0 && days === 0) document.getElementById("container_cdminutes").classList.add('hidden');
-
-            document.getElementById("days").innerHTML = days < 10 ? `0${days}` : days;
-            document.getElementById("hours").innerHTML = hours < 10 ? `0${hours}` : hours;
-            document.getElementById("minutes").innerHTML = minutes < 10 ? `0${minutes}` : minutes;
-            document.getElementById("seconds").innerHTML = seconds < 10 ? `0${seconds}` : seconds;
-
-            return distance;
-        }
-
-        if (countDownDate - Date.now() <= 0) {
-            document.getElementById("countdown_container").classList.add('hidden');
-            document.getElementById("countdownhide").classList.add('hidden');
-            document.getElementById("downloadapp").classList.remove('hidden');
-        } else {
-            document.getElementById("countdown_container").classList.remove('hidden');
-            document.getElementById("countdownhide").classList.remove('hidden');
-            document.getElementById("countdownhide2").classList.remove('hidden');
-            document.getElementById("downloadapp").classList.add('hidden');
-            doCountdown();
-            var x = setInterval(function () {
-                var distance = doCountdown();
-
-                if (distance <= 1000) {
-                    clearInterval(x);
-
-                    document.getElementById("countdown_container").classList.add('hidden');
-                    document.getElementById("countdownhide").classList.add('hidden');
-                    document.getElementById("countdownhide2").classList.add('hidden');
-                    document.getElementById("downloadapp").classList.remove('hidden');
-                }
-            }, 1000);
-        }
-    </script>
 </body>
 </html>

@@ -4,8 +4,6 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-.hidden { display: none!important; }
-
 .header {
 	position: relative;
 	top: 0;
@@ -97,93 +95,6 @@ body {
 			@include phone() {
 				font-size: 32px;
 				text-align: center;
-			}
-		}
-
-		> .available {
-			@include phone() {
-				position: absolute;
-				bottom: calc(100px + 48px);
-				color: #000;
-			}
-			@include xsmallphone() {
-				bottom: calc(64px + 48px);
-			}
-		}
-
-		> .countdown {
-			margin-top: 8px;
-			
-			> .clock {
-				display: inline-flex;
-				background-color: transparentize($color: #fff, $amount: 0.8);
-				padding: 12px 16px;
-				border-radius: 8px;
-				> div {
-					&:not(:last-child) { margin-right: 8px; }
-					&.hidden { display: none; }
-					> p {
-						white-space: nowrap;
-						font-size: 24px;
-						font-weight: 500;
-						> .dots { display: none; }
-						> .words { display: inline; }
-					}
-				}
-			}
-
-			@include phone() {
-				position: absolute;
-				bottom: 100px;
-				> .clock {
-					flex-wrap: wrap;
-					> div {
-						background-color: unset;
-						> p {
-							color: #000;
-							white-space: normal;
-							text-align: center;
-							> .dots { display: inline; }
-							> .words { display: none; }
-						}
-					}
-				}
-			}
-
-			@include xsmallphone() {
-				bottom: 64px;
-			}
-		}
-
-		> .addtocld {
-			margin-top: 12px;
-			text-decoration: none;
-			> div {
-				display: inline-block;
-				color: #000;
-				background-color: #fff;
-				padding: 8px 12px;
-				border-radius: 8px;
-				font-weight: 600;
-				transition: all 0.2s;
-				&:hover {
-					color: #fff;
-					background-color: #000;
-				}
-			}
-			@include phone() {
-				position: absolute;
-				bottom: calc(100px - 40px);
-				> div {
-					border: 2px solid #000;
-				}
-			}
-			@include xsmallphone() {
-				position: absolute;
-				bottom: 20px;
-				> div {
-					border: 2px solid #000;
-				}
 			}
 		}
 
