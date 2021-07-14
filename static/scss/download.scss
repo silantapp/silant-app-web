@@ -1,0 +1,113 @@
+@import './mixins.scss';
+
+body {
+    font-family: 'Poppins', sans-serif;
+	background: rgb(18, 36, 73);
+	background: radial-gradient(circle, rgb(16, 30, 59) 0%, rgb(4, 10, 27) 75%);
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	width: 350px;
+	height: 100vh;
+	justify-content: center;
+	margin: auto;
+	overflow-x: hidden;
+
+	@include phone() {
+		width: 200px;
+	}
+
+	> .logo {
+		position: relative;
+		height: 128px;
+		width: 128px;
+		margin: 0 auto;
+
+		@include phone() {
+			height: 200px;
+			width: 200px;
+		}
+
+		> img {
+			position: absolute;
+			height: 100%;
+			width: auto;
+
+			&:not(:nth-child(1)) { animation: scale 2s infinite cubic-bezier(.29,1.21,.64,-0.21); }
+			&:nth-child(3) { animation-delay: 0.4s; }
+			&:nth-child(4) { animation-delay: 0.8s; }
+		}
+	}
+
+	> h1 {
+		color: white;
+		text-align: center;
+	}
+
+	> .download {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+
+		@include phone() {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		> a {
+			> img {
+				height: 70px;
+				width: auto;
+			}
+		}
+	}
+}
+
+.background {
+	z-index: -1;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	overflow: hidden;
+
+	> .wave {
+		position: absolute;
+		height: 100vh;
+		left: 0vw;
+		pointer-events: none;
+		-webkit-filter: drop-shadow(0 1px 10px rgba(0,0,0,0.8));
+		filter: url(#drop-shadow);
+		
+		@include phone() {
+			display: none;
+		}
+	}
+
+	> .wave2 {
+		position: absolute;
+		right: -30vw;
+		pointer-events: none;
+		-webkit-filter: drop-shadow(0 1px 10px rgba(0,0,0,0.8));
+		filter: url(#drop-shadow2);
+
+		@include phone() {
+			right: -10vw;
+		}
+	}
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
